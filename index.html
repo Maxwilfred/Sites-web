@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - D. Maxwilfred</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <!-- Parallax Hero Section -->
+  <section class="parallax text-center text-white d-flex align-items-center justify-content-center">
+    <div>
+      <h1 class="hero-title">BIENVENUE SUR MON PORTFOLIO</h1>
+      <p>Ingénieur en Développement Full-Stack et Technologies Avancées</p>
+      <a href="#projects" class="btn btn-outline-light mt-4">Voir mes projets</a>
+    </div>
+  </section>
+
+  <!-- Section Projets avec Filtrage et Effet au Scroll -->
+  <section id="projects" class="projects" data-aos="fade-up">
+    <div class="container">
+      <h2 class="text-center mb-5">Mes Projets</h2>
+      <div class="d-flex justify-content-center mb-4">
+        <button class="btn btn-outline-primary mx-2 filter-btn" data-filter="all">Tous</button>
+        <button class="btn btn-outline-primary mx-2 filter-btn" data-filter="html">HTML/CSS</button>
+        <button class="btn btn-outline-primary mx-2 filter-btn" data-filter="js">JavaScript</button>
+        <button class="btn btn-outline-primary mx-2 filter-btn" data-filter="bootstrap">Bootstrap</button>
+      </div>
+      <div class="row project-grid">
+        <div class="col-md-4 project-item html" data-aos="fade-up" data-aos-delay="100">
+          <div class="card">
+            <img src="project1.jpg" class="card-img-top" alt="Projet 1">
+            <div class="card-body">
+              <h5 class="card-title">Projet 1: Site E-commerce</h5>
+              <p class="card-text">Site complet de de vente de chaussure de sport. Le site intègre la gestion des produits, des utilisateurs et les paiements en ligne</p>
+              <a href="#" class="btn btn-primary">Voir le projet</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 project-item js" data-aos="fade-up" data-aos-delay="200">
+          <div class="card">
+            <img src="project2.jpg" class="card-img-top" alt="Projet 2">
+            <div class="card-body">
+              <h5 class="card-title">Proje 2: Module d'un ERP</h5>
+              <p class="card-text">Développement du module Achat et Approvisionnement d'un système ERP(Entreprise Ressource</p>
+              <a href="#" class="btn btn-primary">Voir le projet</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 project-item bootstrap" data-aos="fade-up" data-aos-delay="300">
+          <div class="card">
+            <img src="project3.jpg" class="card-img-top" alt="Projet 3">
+            <div class="card-body">
+              <h5 class="card-title">Projet 3: Site web d'un Hôtel</h5>
+              <p class="card-text">Le site complet d'un hôtel fictif permettant d'explorer l'hôtel, de réserver des chambres ou de contacter l'hôtel</p>
+              <a href="#" class="btn btn-primary">Voir le projet</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section À propos avec Timeline -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="text-center mb-5"><br><STRONG>À PROPOS MAXWILFRED</STRONG></h2>
+      <div class="timeline">
+        <div class="timeline-item left" data-aos="fade-right">
+          <h4><strong>FORMATION</strong></h4>
+          <p><strong>Master en Ingénierie Web, Mobile et Big Data </strong><br> Ecole Nationale des Sciences Appliquées <br></p>
+          <p><strong>Licence en Ingénierie de Conception et Développement d'Application</strong> <br>Université Hassan I <br></p>
+          <p><strong>Diplôme de Technicien Spécialisé en Développement Informatique</strong> <br>Institut Spécialisé de Technologie Appliquée</p>
+        </div>
+
+        <div class="timeline-item right" data-aos="fade-left">
+            <h4><strong>PROJETS ACADEMIQUES</strong></h4>
+            <p><strong>Site E-commerce de vente de chaussures de sport</strong><br> 
+            Projet académique visant à développer un site e-commerce complet dédié à la vente de chaussures pour le sport. Le site intègre la gestion des produits, des utilisateurs, et des paiements en ligne. Technologie utilisées: HTML, CSS, Javascript, PHP et MySQL. Le site est également optimisé pour une navigation responsive sur mobile.</p>
+            <p><strong>Module Achat et Approvisinnement</strong><br> 
+            Développement d'un module d'achat et d'approvisionnement pour un système ERP (Enterprise Ressource Planning) dans le cadre d'un projet académique. Le module permet de gérer les commandes fournisseurs, le suivi des livraisons, ainsi que les stocks et approvisionnements. Technologies utilisées: HTML, CSS, JavaScript, Laravel et MySQL</p>
+        </div>
+
+        <div class="timeline-item left" data-aos="fade-right">
+            <h4><strong>MES CERTIFICATIONS</strong></h4>
+            <p>HTML, CSS & JavaScript <br> <strong>Coursera</strong></p>
+            <p>Le framework LARAVEL <br><strong>Coursera</strong></p>
+          </div>
+
+          <!-- <div class="timeline-item right" data-aos="fade-left"> -->
+            <!-- <h4>TEMOIGNAGES</h4> -->
+            <!-- <p>Site E-commerce de vente de chaussures de sport</p> -->
+          <!-- </div> -->
+        <!-- Ajouter plus d'éléments de la timeline -->
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
