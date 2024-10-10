@@ -1,112 +1,159 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Parallax Section */
+.parallax {
+  background-image: url("image-de-fond.jpg");
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px;
+  transition: transform 0.3 ease, color 0.3s ease;
+}
+
+.hero-title:hover {
+  transform: scale(1.1);
+  color: #ffffff;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+.parallax p {
+  font-size: 1.2rem;
+  color: #dddddd;
+  margin-top: 10px;
+}
+
+/* Projects Section */
+.projects {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* New About Section */
+.about {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+}
+
+.about-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.about-card .icon img {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+.about-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.about-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .about-card {
+    margin-bottom: 20px;
   }
-  
-  .parallax {
-    background-image: url('image-de-fond.jpg');
-    min-height: 100vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+/* Timeline (if still used) */
+.timeline {
+  position: relative;
+  margin: 50px 0;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #ddd;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    left: 0;
     text-align: center;
   }
+}
 
-  .hero-title {
-    font-size: 3rem;
-    font-family: 'poppins', sans-serif;
-    color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    letter-spacing: 2px;
-    transition: transform 0.3 ease, color 0.3s ease;
-  }
+/* Button Styles */
+.btn-outline-primary {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-  .hero-title:hover{
-    transform: scale(1.1);
-    color: #ffffff;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
-  }
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
 
-  .parallax p{
-    font-size: 1.2rem;
-    color: #dddddd;
-    margin-top: 10px;
-  }
-  
-  .projects {
-    padding: 50px 0;
-    background-color: #f5f5f5;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-  }
-  
-  .timeline {
-    position: relative;
-    margin: 50px 0;
-  }
-  
-  .timeline:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: #ddd;
-  }
-  
-  .timeline-item {
-    position: relative;
-    width: 50%;
-    padding: 20px;
-  }
-  
-  .timeline-item.left {
-    left: 0;
-    text-align: right;
-  }
-  
-  .timeline-item.right {
-    left: 50%;
-  }
-  
-  @media (max-width: 768px) {
-    .timeline-item {
-      width: 100%;
-      left: 0;
-      text-align: center;
-    }
-  }
-  
-  .btn-outline-primary {
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .btn-outline-primary:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  /* Mode sombre et clair */
-  body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-  }
-  
-  body.dark-mode .btn-outline-primary {
-    border-color: #ffffff;
-  }
-  
-  body.dark-mode .btn-outline-primary:hover {
-    background-color: #ffffff;
-    color: #000;
-  }
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .btn-outline-primary {
+  border-color: #ffffff;
+}
+
+body.dark-mode .btn-outline-primary:hover {
+  background-color: #ffffff;
+  color: #000;
+}
